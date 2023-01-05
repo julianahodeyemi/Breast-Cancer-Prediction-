@@ -47,6 +47,6 @@ print(cm_test)
 accuracy_score(y_test, y_test_pred)
 # %%
 #Accuracy with k-fold cross validation
-accu = cross_val_score(estimatoer=log_reg, x = X_train, y= y_train, cv=10)
+accu = cross_val_score(estimator=log_reg, X = X_train, y= y_train, cv=10)
 print('Accuracy : {:.2f} %'.format(accu.mean()*100))
-print('Accuracy : {:.2f} %'.format(accu.mean()*100))
+print('Accuracy : {:.2f} %'.format(accu.std()*100))
