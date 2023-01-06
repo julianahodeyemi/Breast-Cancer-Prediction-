@@ -1,5 +1,7 @@
 #%%
 #Import libraries
+import warnings
+warnings.filterwarnings('ignore')
 import pandas as pd
 import numpy as np
 from pandas_profiling import ProfileReport
@@ -52,7 +54,7 @@ print('Accuracy : {:.2f} %'.format(accu.mean()*100))
 print('Accuracy : {:.2f} %'.format(accu.std()*100))
 
 #%%
-# Applying Grid Search to find the best parameters
+#Applying Grid Search to find the best parameters
 from sklearn.model_selection import GridSearchCV
 parameters = [{'C': [0.25, 0.5, 0.75, 1], 'penalty':['l1','l2']}]
 grid_search = GridSearchCV(estimator = log_reg,
